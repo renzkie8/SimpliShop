@@ -238,7 +238,7 @@ def LandingPage(page: ft.Page):
                 page.update()
 
         t = threading.Thread(target=_poll, daemon=True)
-        t.START()
+        t.start()
 
     def _process_google_result(result):
         """Process OAuth payload for authentication or registration."""
@@ -317,7 +317,7 @@ def LandingPage(page: ft.Page):
         login_pass,
         login_role,
         ft.Container(height=5),
-        ft.ElevatedButton("Login", width=float("inf"), height=48, 
+        ft.ElevatedButton("Login", expand=True, height=48, 
                           style=ft.ButtonStyle(
                               shape=ft.RoundedRectangleBorder(radius=8),
                               bgcolor="#00897b",
@@ -342,7 +342,7 @@ def LandingPage(page: ft.Page):
         su_address,
         su_role,
         ft.Container(height=5),
-        ft.ElevatedButton("Create Account", width=float("inf"), height=48, 
+        ft.ElevatedButton("Create Account", expand=True, height=48, 
                           style=ft.ButtonStyle(
                               shape=ft.RoundedRectangleBorder(radius=8),
                               bgcolor="#00897b",
