@@ -22,10 +22,6 @@ def LandingPage(page: ft.Page):
         icon=theme_icon_name, 
         on_click=toggle_theme, 
         tooltip="Toggle Theme",
-        style=ft.ButtonStyle(
-            shape=ft.CircleBorder(),
-            side=ft.BorderSide(1, "outlineVariant"),
-        )
     )
 
     # Initialize input factory
