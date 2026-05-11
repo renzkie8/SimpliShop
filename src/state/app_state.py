@@ -104,7 +104,7 @@ class AppState:
             except:
                 pass
 
-        threading.Thread(target=close_toast, daemon=True).START()
+        threading.Thread(target=close_toast, daemon=True).start()
 
     @staticmethod
     def emit_event(event_name, *args, **kwargs):
@@ -120,6 +120,7 @@ class AppState:
     @staticmethod
     def emit(event_name, *args, **kwargs):
         AppState.emit_event(event_name, *args, **kwargs)
+
 
 
 
