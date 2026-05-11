@@ -207,7 +207,7 @@ def PharmacistDashboard():
                     ft.Icon(ft.icons.CHECK_CIRCLE_OUTLINE, size=60, color="primary"),
                     ft.Text("No pending prescriptions!", size=16, color="outline"),
                     ft.Text("Great job! All prescriptions have been reviewed.", size=12, color="outline"),
-                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                 padding=30,
             )
         )
@@ -417,6 +417,7 @@ def PharmacistDashboard():
                 border=ft.border.all(1, "outlineVariant"),
                 expand=1,
             ),
-        ], spacing=15, vertical_alignment=ft.CrossAxisAlignment.start, expand=True),
-    ], scroll=ft.ScrollMode.auto, spacing=0, expand=True)
+        ], spacing=15, vertical_alignment=ft.CrossAxisAlignment.START, expand=True),
+    ], scroll=ft.ScrollMode.AUTO, spacing=0, expand=True)
+
 

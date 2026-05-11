@@ -120,7 +120,7 @@ def UserManagement():
                     ft.Container(
                         content=ft.Text("No users found", size=16, color="outline"),
                         padding=50,
-                        alignment=ft.alignment.center,
+                        alignment=ft.alignment.CENTER,
                     )
                 )
                 if e:
@@ -160,7 +160,7 @@ def UserManagement():
                     ft.TextButton("Cancel", on_click=lambda e: e.page.close(dialog)),
                     ft.TextButton("Delete", on_click=confirm_delete),
                 ],
-                actions_alignment=ft.MainAxisAlignment.end,
+                actions_alignment=ft.MainAxisAlignment.END,
             )
             e.page.open(dialog)
         
@@ -243,7 +243,7 @@ def UserManagement():
                         phone_field,
                         role_field,
                         password_field,
-                    ], tight=True, scroll=ft.ScrollMode.auto),
+                    ], tight=True, scroll=ft.ScrollMode.AUTO),
                     width=400,
                     height=400,
                 ),
@@ -251,7 +251,7 @@ def UserManagement():
                     ft.TextButton("Cancel", on_click=lambda e: e.page.close(edit_dialog)),
                     ft.TextButton("Save", on_click=save_changes),
                 ],
-                actions_alignment=ft.MainAxisAlignment.end,
+                actions_alignment=ft.MainAxisAlignment.END,
             )
             
             e.page.open(edit_dialog)
@@ -421,7 +421,7 @@ def UserManagement():
                     email_field,
                     phone_field,
                     role_field,
-                ], tight=True, scroll=ft.ScrollMode.auto),
+                ], tight=True, scroll=ft.ScrollMode.AUTO),
                 width=400,
                 height=400,
             ),
@@ -429,7 +429,7 @@ def UserManagement():
                 ft.TextButton("Cancel", on_click=lambda e: e.page.close(add_dialog)),
                 ft.TextButton("Create", on_click=save_new_user),
             ],
-            actions_alignment=ft.MainAxisAlignment.end,
+            actions_alignment=ft.MainAxisAlignment.END,
         )
         
         e.page.open(add_dialog)
@@ -467,5 +467,6 @@ def UserManagement():
         ft.Container(height=20),
         
         users_container,
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

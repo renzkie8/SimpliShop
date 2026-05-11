@@ -161,8 +161,8 @@ def StaffOrderTracking():
                         ft.Container(ft.Text(status, weight="bold"), bgcolor=ft.colors.with_opacity(0.3, color),
                                     padding=ft.padding.symmetric(horizontal=12, vertical=6), border_radius=20),
                         *(([ft.Text("🔒 LOCKED", size=10, weight="bold", color="red")]) if is_locked else []),
-                    ], spacing=10, alignment=ft.MainAxisAlignment.center),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                    ], spacing=10, alignment=ft.MainAxisAlignment.CENTER),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
                 # Discount section if requested
                 *([ft.Row([
@@ -201,7 +201,7 @@ def StaffOrderTracking():
                 ft.Divider(),
                 
                 # Total
-                ft.Row([ft.Text("Total:", weight="bold"), ft.Text(f"₱{total:.2f}", size=14, weight="bold", color="primary")], alignment=ft.MainAxisAlignment.space_between),
+                ft.Row([ft.Text("Total:", weight="bold"), ft.Text(f"₱{total:.2f}", size=14, weight="bold", color="primary")], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 ft.Divider(),
                 
                 # STATUS UPDATE CONTROLS - LOCKED IF COMPLETED/CANCELLED
@@ -255,7 +255,7 @@ def StaffOrderTracking():
             status_filter = status_dropdown.value or "All"
             orders = load_orders(search_text, status_filter)
             if not orders:
-                orders_container.controls.append(ft.Text("No orders found", size=14, color="outline", text_align=ft.TextAlign.center))
+                orders_container.controls.append(ft.Text("No orders found", size=14, color="outline", text_align=ft.TextAlign.CENTER))
             else:
                 for order in orders:
                     orders_container.controls.append(create_order_card(order))
@@ -268,7 +268,7 @@ def StaffOrderTracking():
     try:
         orders = load_orders()
         if not orders:
-            orders_container.controls.append(ft.Text("No orders", size=14, color="outline", text_align=ft.TextAlign.center))
+            orders_container.controls.append(ft.Text("No orders", size=14, color="outline", text_align=ft.TextAlign.CENTER))
         else:
             for order in orders:
                 orders_container.controls.append(create_order_card(order))
@@ -304,4 +304,5 @@ def StaffOrderTracking():
         padding=15,
         expand=True,
     )
+
 

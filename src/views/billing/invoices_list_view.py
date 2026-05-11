@@ -140,7 +140,7 @@ def InvoicesListView():
                         padding=ft.padding.symmetric(horizontal=12, vertical=6),
                         border_radius=15,
                     ),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
                 ft.Divider(height=10),
                 
@@ -284,9 +284,9 @@ def InvoicesListView():
                         ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No invoices found", size=18, color="outline"),
                         ft.Text("Try adjusting your filters or create a new invoice", size=14, color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.center, 
+                    alignment=ft.alignment.CENTER, 
                 )
             )
         
@@ -349,5 +349,6 @@ def InvoicesListView():
             ], spacing=15),
             padding=20,
         ),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

@@ -35,7 +35,7 @@ def StaffPatientSearch():
                         width=60, height=60,
                         bgcolor="primaryContainer",
                         border_radius=30,
-                        alignment=ft.alignment.center,
+                        alignment=ft.alignment.CENTER,
                     ),
                     ft.Column([
                         ft.Text(patient['full_name'], size=18, weight="bold"),
@@ -69,7 +69,7 @@ def StaffPatientSearch():
                     ft.Column([
                         ft.Row([ft.Icon(ft.icons.CALENDAR_TODAY, size=16, color="outline"), ft.Text(f"Reg: {patient['created_at'][:10]}", size=13)], spacing=8),
                     ])
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
             ], spacing=5),
             padding=20,
@@ -92,8 +92,8 @@ def StaffPatientSearch():
                     content=ft.Column([
                         ft.Icon(ft.icons.SEARCH, size=50, color="outline"),
                         ft.Text("Enter a name or phone number", color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.center),
-                    alignment=ft.alignment.center,
+                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+                    alignment=ft.alignment.CENTER,
                     padding=50
                 )
             )
@@ -119,7 +119,7 @@ def StaffPatientSearch():
                 results_container.controls.append(
                     ft.Container(
                         content=ft.Text("No customers found.", size=16, color="error"),
-                        alignment=ft.alignment.center,
+                        alignment=ft.alignment.CENTER,
                         padding=20
                     )
                 )
@@ -141,7 +141,7 @@ def StaffPatientSearch():
             results_container.controls.append(
                 ft.Container(
                     content=ft.Text("Error during search. Please try again.", size=14, color="error"),
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                     padding=20
                 )
             )
@@ -175,10 +175,11 @@ def StaffPatientSearch():
             ])
         )
     ], 
-    scroll=ft.ScrollMode.auto, 
+    scroll=ft.ScrollMode.AUTO, 
     spacing=0,
     # Vertical alignment enforcement
-    alignment=ft.MainAxisAlignment.start,
+    alignment=ft.MainAxisAlignment.START,
     expand=True
     )
+
 

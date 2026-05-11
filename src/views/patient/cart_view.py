@@ -165,7 +165,7 @@ def CartView():
         quantity_field = ft.TextField(
             value=str(quantity),
             width=60,
-            text_align=ft.TextAlign.center,
+            text_align=ft.TextAlign.CENTER,
             border_color="outline",
             on_submit=lambda e: update_quantity(cart_id, medicine_id, int(e.control.value), quantity, stock, e)
         )
@@ -179,7 +179,7 @@ def CartView():
                     bgcolor="surfaceVariant",
                     border_radius=8,
                     content=ft.Icon(ft.icons.MEDICATION, size=30, color="outline"),
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                 ),
                 # name and price
                 ft.Column([
@@ -217,7 +217,7 @@ def CartView():
                     tooltip="Remove from cart",
                     on_click=lambda e: remove_from_cart(cart_id, medicine_id, quantity, e)
                 ),
-            ], alignment=ft.MainAxisAlignment.space_between, spacing=15),
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, spacing=15),
             padding=15,
             border=ft.border.all(1, "outlineVariant"),
             border_radius=10,
@@ -347,16 +347,16 @@ def CartView():
                 ft.Row([
                     ft.Text("Subtotal:", size=14),
                     ft.Text(f"₱ {subtotal:.2f}", size=14, weight="bold"),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 ft.Row([
                     ft.Text("Tax (12%):", size=14),
                     ft.Text(f"₱ {tax:.2f}", size=14, weight="bold"),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 ft.Divider(),
                 ft.Row([
                     ft.Text("Total:", size=18, weight="bold"),
                     ft.Text(f"₱ {total:.2f}", size=20, weight="bold", color="primary"),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 ft.Container(height=10),
                 
                 # Discount dropdown
@@ -379,7 +379,7 @@ def CartView():
                     icon=ft.icons.ARROW_BACK,
                     on_click=lambda e: e.page.go("/patient/search"),
                 ),
-            ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.center)
+            ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.CENTER)
         else:
             # Render empty state
             summary_container.content = ft.Column([
@@ -393,7 +393,7 @@ def CartView():
                     bgcolor="primary",
                     color="onPrimary",
                 ),
-            ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10)
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10)
         
         e.page.update()
     
@@ -417,11 +417,11 @@ def CartView():
                         bgcolor="primary",
                         color="onPrimary",
                     ),
-                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                 padding=80,
-                alignment=ft.alignment.center,
+                alignment=ft.alignment.CENTER,
             ),
-        ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=0)
+        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=0)
     
     # Render initial cart inventory
     for item in items:
@@ -439,16 +439,16 @@ def CartView():
         ft.Row([
             ft.Text("Subtotal:", size=14),
             ft.Text(f"₱ {subtotal:.2f}", size=14, weight="bold"),
-        ], alignment=ft.MainAxisAlignment.space_between),
+        ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
         ft.Row([
             ft.Text("Tax (12%):", size=14),
             ft.Text(f"₱ {tax:.2f}", size=14, weight="bold"),
-        ], alignment=ft.MainAxisAlignment.space_between),
+        ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
         ft.Divider(),
         ft.Row([
             ft.Text("Total:", size=18, weight="bold"),
             ft.Text(f"₱ {total:.2f}", size=20, weight="bold", color="primary"),
-        ], alignment=ft.MainAxisAlignment.space_between),
+        ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
         ft.Container(height=10),
         
         # Discount dropdown
@@ -471,7 +471,7 @@ def CartView():
             icon=ft.icons.ARROW_BACK,
             on_click=lambda e: e.page.go("/patient/search"),
         ),
-    ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.center)
+    ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.CENTER)
     
     # Primary layout structure
     return ft.Column([
@@ -498,7 +498,8 @@ def CartView():
                 border=ft.border.all(1, "outlineVariant"),
                 width=400,
             ),
-        ], alignment=ft.MainAxisAlignment.center),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+        ], alignment=ft.MainAxisAlignment.CENTER),
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
 

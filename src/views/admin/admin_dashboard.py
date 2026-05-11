@@ -88,7 +88,7 @@ def AdminDashboard():
                     ], spacing=2, expand=True),
                 ], spacing=15),
             ],
-            alignment=ft.MainAxisAlignment.center,
+            alignment=ft.MainAxisAlignment.CENTER,
             ),
             padding=20,
             bgcolor="surface",
@@ -278,7 +278,7 @@ def AdminDashboard():
                     ft.Row([
                         ft.Text("Recent Activity", size=20, weight="bold"),
                         ft.TextButton("View All →", on_click=lambda e: e.page.go("/admin/logs")),
-                    ], alignment=ft.MainAxisAlignment.space_between),
+                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                     ft.Divider(),
                     
                     *activity_list,
@@ -345,6 +345,7 @@ def AdminDashboard():
                 expand=1,
                 height=450,
             ),
-        ], spacing=15, vertical_alignment=ft.CrossAxisAlignment.start, expand=True),
-    ], scroll=ft.ScrollMode.auto, spacing=0, expand=True)
+        ], spacing=15, vertical_alignment=ft.CrossAxisAlignment.START, expand=True),
+    ], scroll=ft.ScrollMode.AUTO, spacing=0, expand=True)
+
 

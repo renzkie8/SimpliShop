@@ -60,7 +60,7 @@ def InvoiceDetailView(invoice_id):
                         bgcolor="primary",
                         color="white",
                     ),
-                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                 padding=50,
             )
         ])
@@ -127,8 +127,8 @@ def InvoiceDetailView(invoice_id):
                             padding=10,
                             border_radius=5,
                         ),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.end),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.END),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
                 ft.Divider(height=30),
                 
@@ -165,8 +165,8 @@ def InvoiceDetailView(invoice_id):
                             ft.Text("Payment Status or Date:", size=12, width=120),
                             ft.Text(format_date(payment_date) if payment_date else "Unpaid", size=12, weight="bold"),
                         ]),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.end),
-                ], vertical_alignment=ft.CrossAxisAlignment.start),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.END),
+                ], vertical_alignment=ft.CrossAxisAlignment.START),
             ], spacing=10),
             padding=30,
             bgcolor="surface",
@@ -186,7 +186,7 @@ def InvoiceDetailView(invoice_id):
                 ft.Container(
                     content=ft.Row([
                         ft.Text("Item", size=13, weight="bold", expand=2),
-                        ft.Text("Quantity", size=13, weight="bold", width=100, text_align=ft.TextAlign.center),
+                        ft.Text("Quantity", size=13, weight="bold", width=100, text_align=ft.TextAlign.CENTER),
                         ft.Text("Unit Price", size=13, weight="bold", width=120, text_align=ft.TextAlign.RIGHT),
                         ft.Text("Total", size=13, weight="bold", width=120, text_align=ft.TextAlign.RIGHT),
                     ]),
@@ -200,7 +200,7 @@ def InvoiceDetailView(invoice_id):
                     ft.Container(
                         content=ft.Row([
                             ft.Text(item[0], size=13, expand=2),
-                            ft.Text(str(item[1]), size=13, width=100, text_align=ft.TextAlign.center),
+                            ft.Text(str(item[1]), size=13, width=100, text_align=ft.TextAlign.CENTER),
                             ft.Text(f"₱{item[2]:.2f}", size=13, width=120, text_align=ft.TextAlign.RIGHT),
                             ft.Text(f"₱{item[3]:.2f}", size=13, width=120, text_align=ft.TextAlign.RIGHT, weight="bold"),
                         ]),
@@ -243,24 +243,24 @@ def InvoiceDetailView(invoice_id):
                     ft.Row([
                         ft.Text("Subtotal:", size=14),
                         ft.Text(f"₱{subtotal:.2f}", size=14, weight="bold"),
-                    ], alignment=ft.MainAxisAlignment.space_between),
+                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                     
                     ft.Row([
                         ft.Text("Tax (12%):", size=14),
                         ft.Text(f"₱{tax:.2f}", size=14, weight="bold"),
-                    ], alignment=ft.MainAxisAlignment.space_between),
+                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                     
                     ft.Row([
                         ft.Text("Discount:", size=14),
                         ft.Text(f"-₱{discount:.2f}", size=14, weight="bold", color="error"),
-                    ], alignment=ft.MainAxisAlignment.space_between) if discount > 0 else ft.Container(),
+                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN) if discount > 0 else ft.Container(),
                     
                     ft.Divider(),
                     
                     ft.Row([
                         ft.Text("TOTAL:", size=18, weight="bold"),
                         ft.Text(f"₱{total:.2f}", size=24, weight="bold", color="primary"),
-                    ], alignment=ft.MainAxisAlignment.space_between),
+                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 ], spacing=10),
                 padding=20,
                 bgcolor="surface",
@@ -272,5 +272,6 @@ def InvoiceDetailView(invoice_id):
         
         ft.Container(height=30),
         
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

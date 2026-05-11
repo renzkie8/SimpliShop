@@ -224,7 +224,7 @@ def PatientPrescriptionsView():
                            size=11, color="outline", italic=True),
                     additional_notes,
                     error_text,
-                ], scroll=ft.ScrollMode.auto, tight=True)
+                ], scroll=ft.ScrollMode.AUTO, tight=True)
             ),
             actions=[
                 ft.TextButton("Cancel", on_click=lambda e: e.page.close(prescription_form)),
@@ -299,10 +299,11 @@ def PatientPrescriptionsView():
         ft.Text("No prescriptions yet", size=20, weight="bold", color="outline"),
         ft.Container(height=10),
         ft.Text("To get started, click the 'Submit Prescription' button above", 
-               size=14, color="outline", text_align=ft.TextAlign.center),
-    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
+               size=14, color="outline", text_align=ft.TextAlign.CENTER),
+    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
     padding=80,
-    alignment=ft.alignment.center,
+    alignment=ft.alignment.CENTER,
         ),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

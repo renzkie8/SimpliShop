@@ -225,7 +225,7 @@ def ReportsView():
                         ft.Icon(ft.icons.ERROR_OUTLINE, size=60, color="error"),
                         ft.Text("Error generating report", size=18, weight="bold"),
                         ft.Text(str(ex), size=12, color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
                 )
             )
@@ -238,8 +238,8 @@ def ReportsView():
             content=ft.Column([
                 ft.Icon(icon, color=color, size=40),
                 ft.Text(str(value), size=32, weight="bold", color=color),
-                ft.Text(title, size=12, color="outline", text_align=ft.TextAlign.center),
-            ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
+                ft.Text(title, size=12, color="outline", text_align=ft.TextAlign.CENTER),
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
             padding=20,
             border=ft.border.all(1, "outlineVariant"),
             border_radius=10,
@@ -305,5 +305,6 @@ def ReportsView():
             ], spacing=15),
             padding=20,
         ),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

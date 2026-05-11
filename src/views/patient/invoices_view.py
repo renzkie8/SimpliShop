@@ -327,7 +327,7 @@ def PatientInvoicesView():
                         bgcolor=ft.colors.with_opacity(0.05, "tertiary"),
                         border_radius=5,
                     ),
-                ], spacing=10, scroll=ft.ScrollMode.auto, tight=True),
+                ], spacing=10, scroll=ft.ScrollMode.AUTO, tight=True),
             ),
             actions=[
                 ft.TextButton("Cancel", on_click=close_dialog),
@@ -446,11 +446,12 @@ def PatientInvoicesView():
                         ft.Icon(ft.icons.RECEIPT_LONG_OUTLINED, size=80, color="outline"),
                         ft.Text("No invoices yet", size=18, color="outline"),
                         ft.Text("Invoices will appear here when you place orders", size=14, color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                 ),
             ]),
         ),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

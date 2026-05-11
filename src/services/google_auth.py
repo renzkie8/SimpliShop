@@ -272,5 +272,6 @@ def start_callback_server(port=8551):
             pass
 
     t = threading.Thread(target=_run, daemon=True)
-    t.start()
+    t.START()
+
 

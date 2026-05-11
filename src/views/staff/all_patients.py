@@ -44,7 +44,7 @@ def AllPatientsView():
                 ft.Container(
                     content=ft.Icon(ft.icons.PERSON, size=20, color="onSecondaryContainer"),
                     bgcolor="secondaryContainer", width=40, height=40, border_radius=20,
-                    alignment=ft.alignment.center
+                    alignment=ft.alignment.CENTER
                 ),
                 
                 # Name & ID
@@ -67,7 +67,7 @@ def AllPatientsView():
                     # Append '/all' to origin route for state recovery
                     on_click=lambda e, pid=patient['id']: e.page.go(f"/staff/patient/{pid}/all")
                 )
-            ], alignment=ft.MainAxisAlignment.space_between),
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
             
             padding=ft.padding.symmetric(horizontal=15, vertical=10),
             bgcolor="surface",
@@ -114,7 +114,7 @@ def AllPatientsView():
             patients_container.controls.append(
                 ft.Container(
                     content=ft.Text("No customers found matching filter.", color="outline"),
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                     padding=20
                 )
             )
@@ -154,10 +154,11 @@ def AllPatientsView():
             ])
         )
     ], 
-    scroll=ft.ScrollMode.auto, 
+    scroll=ft.ScrollMode.AUTO, 
     spacing=0,
     # Ensure element alignment begins from top
-    alignment=ft.MainAxisAlignment.start,
+    alignment=ft.MainAxisAlignment.START,
     expand=True
     )
+
 

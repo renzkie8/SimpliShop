@@ -8,3 +8,4 @@ from views.billing.invoice_detail_view import InvoiceDetailView
 from views.billing.profile_view import BillingProfileView
 __all__ = ['BillingDashboard', 'CreateInvoicesView', 'BillingReportsView', 'InvoicesListView', 'PaymentHistoryView', 'InvoiceDetailView', 'BillingProfileView']
 
+

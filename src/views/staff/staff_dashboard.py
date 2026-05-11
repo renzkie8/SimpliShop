@@ -53,8 +53,8 @@ def StaffDashboard():
             content=ft.Column([
                 ft.Icon(icon, color=color, size=40),
                 ft.Text(str(value), size=32, weight="bold", color=color),
-                ft.Text(title, size=12, color="outline", text_align=ft.TextAlign.center),
-            ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
+                ft.Text(title, size=12, color="outline", text_align=ft.TextAlign.CENTER),
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
             padding=20,
             bgcolor="surface", # This ensures it looks good in dark mode (greyish)
             border_radius=12,
@@ -68,7 +68,7 @@ def StaffDashboard():
             content=ft.Row([
                 ft.Icon(icon, color="onPrimary"),
                 ft.Text(text, color="onPrimary", size=15, weight="bold"),
-            ], spacing=15, alignment=ft.MainAxisAlignment.center),
+            ], spacing=15, alignment=ft.MainAxisAlignment.CENTER),
             bgcolor=color,
             on_click=lambda e: e.page.go(route), # Go to the page when clicked
             style=ft.ButtonStyle(
@@ -186,9 +186,10 @@ def StaffDashboard():
                         ]),
                         expand=1, # Takes up 1/3 of the width
                     )
-                ], spacing=20, vertical_alignment=ft.CrossAxisAlignment.start, expand=True)
+                ], spacing=20, vertical_alignment=ft.CrossAxisAlignment.START, expand=True)
                 
             ])
         )
-    ], scroll=ft.ScrollMode.auto, spacing=0, expand=True)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0, expand=True)
+
 

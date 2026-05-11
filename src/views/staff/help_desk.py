@@ -41,10 +41,10 @@ def HelpDeskView():
                 *[ft.Row([
                     ft.Container(
                         content=ft.Text(str(i+1), size=10, color="white", weight="bold"),
-                        bgcolor="secondary", width=20, height=20, border_radius=10, alignment=ft.alignment.center
+                        bgcolor="secondary", width=20, height=20, border_radius=10, alignment=ft.alignment.CENTER
                     ),
                     ft.Text(step, size=13, expand=True)
-                ], vertical_alignment=ft.CrossAxisAlignment.start) for i, step in enumerate(steps)]
+                ], vertical_alignment=ft.CrossAxisAlignment.START) for i, step in enumerate(steps)]
             ], spacing=8),
             padding=20,
             bgcolor="surface",
@@ -61,7 +61,7 @@ def HelpDeskView():
                 ft.Text(role, weight="bold", size=14),
                 ft.Text(email, size=12, color="outline"),
                 ft.Text(f"Ext: {ext}", size=12, weight="bold", color="secondary"),
-            ], horizontal_alignment=ft.CrossAxisAlignment.center),
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
             padding=20,
             bgcolor="surface",
             border_radius=12,
@@ -95,7 +95,7 @@ def HelpDeskView():
                         "Direct medical Qs to Pharmacist",
                         "Be polite!"
                     ]),
-                ], alignment=ft.MainAxisAlignment.start, vertical_alignment=ft.CrossAxisAlignment.start),
+                ], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.START),
                 
                 ft.Container(height=30),
                 
@@ -123,9 +123,10 @@ def HelpDeskView():
                 # Footer info
                 ft.Container(
                     content=ft.Text("Kaputt Kommandos PMS v1.0", size=11, color="outline"),
-                    alignment=ft.alignment.center
+                    alignment=ft.alignment.CENTER
                 )
             ])
         )
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

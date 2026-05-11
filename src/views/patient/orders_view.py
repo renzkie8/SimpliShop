@@ -104,7 +104,7 @@ def OrdersView():
                         padding=ft.padding.symmetric(horizontal=12, vertical=6),
                         border_radius=15,
                     ),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
                 ft.Divider(),
                 
@@ -120,7 +120,7 @@ def OrdersView():
                 ft.Row([
                     ft.Text("Total:", size=14, weight="bold"),
                     ft.Text(f"₱ {total:.2f}", size=16, weight="bold", color="primary"),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
                 ft.Row([
                     ft.OutlinedButton(
@@ -133,7 +133,7 @@ def OrdersView():
                         icon=ft.icons.VISIBILITY,
                         on_click=lambda e: view_order_details(e, order_id)
                     ),
-                ], alignment=ft.MainAxisAlignment.end, spacing=10),
+                ], alignment=ft.MainAxisAlignment.END, spacing=10),
                 
             ], spacing=10),
             padding=20,
@@ -179,7 +179,7 @@ def OrdersView():
                 ft.Row([
                     ft.Text(f"{item[0]} x{item[1]}", expand=True),
                     ft.Text(f"₱{item[3]:.2f}", weight="bold"),
-                ], alignment=ft.MainAxisAlignment.space_between)
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
             )
         
         # Render detail modal
@@ -198,17 +198,17 @@ def OrdersView():
                 ft.Row([
                     ft.Text("Subtotal:", size=13),
                     ft.Text(f"₱{calculated_subtotal:.2f}", size=13),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
                 ft.Row([
                     ft.Text("Tax/Fees:", size=13),
                     ft.Text(f"₱{tax_amount:.2f}", size=13),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
                 ft.Row([
                     ft.Text("Total:", weight="bold"),
                     ft.Text(f"₱{stored_total:.2f}", weight="bold", color="primary"),
-                ], alignment=ft.MainAxisAlignment.space_between),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 
             ], spacing=10, tight=True, width=400),
             actions=[
@@ -241,9 +241,9 @@ def OrdersView():
                             bgcolor="primary",
                             color="onPrimary",
                         ),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                 )
             )
         
@@ -283,5 +283,6 @@ def OrdersView():
         
         # List of cards
         orders_container,
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

@@ -13,11 +13,11 @@ class AppLayout(ft.Row):
 
         # Initialize interface theme toggle
         def toggle_theme(e):
-            if self.page.theme_mode == ft.ThemeMode.light:
-                self.page.theme_mode = ft.ThemeMode.dark
+            if self.page.theme_mode == ft.ThemeMode.LIGHT:
+                self.page.theme_mode = ft.ThemeMode.DARK
                 e.control.icon = ft.icons.DARK_MODE
             else:
-                self.page.theme_mode = ft.ThemeMode.light
+                self.page.theme_mode = ft.ThemeMode.LIGHT
                 e.control.icon = ft.icons.LIGHT_MODE
             self.page.update()
 
@@ -73,7 +73,7 @@ class AppLayout(ft.Row):
             bgcolor="surface",
             border=ft.border.only(bottom=ft.border.BorderSide(1, "outlineVariant")),
             content=ft.Row(
-                alignment=ft.MainAxisAlignment.space_between,
+                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                 controls=[
                     # System traversal buttons
                     ft.IconButton(
@@ -116,7 +116,7 @@ class AppLayout(ft.Row):
         # Setup scrolling viewport
         self.scrollable_content = ft.Column(
             expand=True,
-            scroll=ft.ScrollMode.auto,
+            scroll=ft.ScrollMode.AUTO,
             controls=[
                 ft.Container(content=content_control, expand=True, padding=20)
             ]
@@ -296,4 +296,5 @@ class AppLayout(ft.Row):
                         break
             except:
                 pass
+
 

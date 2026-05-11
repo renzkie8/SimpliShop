@@ -34,8 +34,8 @@ def BillingReportsView():
             content=ft.Column([
                 ft.Icon(icon, color=color, size=32),
                 ft.Text(str(value), size=28, weight="bold", color=color),
-                ft.Text(title, size=12, color="outline", text_align=ft.TextAlign.center),
-            ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
+                ft.Text(title, size=12, color="outline", text_align=ft.TextAlign.CENTER),
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
             padding=20,
             border=ft.border.all(1, "outlineVariant"),
             border_radius=10,
@@ -49,7 +49,7 @@ def BillingReportsView():
             content=ft.Column([
                 ft.Text(title, size=14, color="outline"),
                 ft.Text(f"₱{amount:,.2f}", size=24, weight="bold", color=color),
-            ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
             padding=20,
             border=ft.border.all(1, "outlineVariant"),
             border_radius=10,
@@ -237,7 +237,7 @@ def BillingReportsView():
                             ft.Text("Invoice Collection Rate", size=14, color="outline"),
                             ft.Text(f"{collection_rate:.1f}%", size=32, weight="bold", color="primary"),
                             ft.Text("of invoices have been paid", size=12, color="outline"),
-                        ], horizontal_alignment=ft.CrossAxisAlignment.center, expand=True),
+                        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, expand=True),
                         
                         ft.VerticalDivider(),
                         
@@ -245,7 +245,7 @@ def BillingReportsView():
                             ft.Text("Revenue Collection", size=14, color="outline"),
                             ft.Text(f"{revenue_collection:.1f}%", size=32, weight="bold", color="primary"),
                             ft.Text("of total invoiced amount collected", size=12, color="outline"),
-                        ], horizontal_alignment=ft.CrossAxisAlignment.center, expand=True),
+                        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, expand=True),
                     ]),
                     padding=30,
                     bgcolor="surface",
@@ -302,5 +302,6 @@ def BillingReportsView():
             ], spacing=15),
             padding=20,
         ),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

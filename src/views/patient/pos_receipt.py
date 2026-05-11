@@ -6,7 +6,7 @@ def POSReceiptView(order_id: int):
     from state.app_state import AppState
     user = AppState.get_user()
     if not user:
-        return ft.Container(content=ft.Text("Unauthorized", color="error"), alignment=ft.alignment.center, expand=True)
+        return ft.Container(content=ft.Text("Unauthorized", color="error"), alignment=ft.alignment.CENTER, expand=True)
         
     # Fetch order data
     conn = get_db_connection()
@@ -27,7 +27,7 @@ def POSReceiptView(order_id: int):
         conn.close()
         return ft.Container(
             content=ft.Text("Order not found or invalid access.", color="error", size=18),
-            alignment=ft.alignment.center,
+            alignment=ft.alignment.CENTER,
             expand=True
         )
         
@@ -78,7 +78,7 @@ def POSReceiptView(order_id: int):
         return ft.Row([
             ft.Text(label, size=13, weight="bold" if bold else "normal", color=color or "onSurfaceVariant"),
             ft.Text(value, size=13, weight="bold" if bold else "normal", color=color or "onSurfaceVariant", text_align=ft.TextAlign.RIGHT)
-        ], alignment=ft.MainAxisAlignment.space_between)
+        ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
 
     # Item List
     items_column = ft.Column(spacing=8)
@@ -91,7 +91,7 @@ def POSReceiptView(order_id: int):
                     ft.Text(f"{qty} x ₱{price:.2f}", size=11, color="outline")
                 ], expand=1, spacing=2),
                 ft.Text(f"₱{item_sub:.2f}", size=13)
-            ], alignment=ft.MainAxisAlignment.space_between)
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
         )
 
     receipt_card = ft.Container(
@@ -114,8 +114,8 @@ def POSReceiptView(order_id: int):
                     ft.Text("Official Receipt", size=12, color="outline"),
                     ft.Text("123 Healthcare Blvd, Medical District", size=10, color="outline"),
                     ft.Text("Tel: (02) 8888-9999", size=10, color="outline"),
-                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=2),
-                alignment=ft.alignment.center,
+                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=2),
+                alignment=ft.alignment.CENTER,
                 padding=ft.padding.only(bottom=20)
             ),
             
@@ -173,13 +173,13 @@ def POSReceiptView(order_id: int):
                     # Barcode mock
                     ft.Container(
                         content=ft.Text(f"|| | ||| | || || | || | |||", size=24, weight="bold", color="#000000"),
-                        alignment=ft.alignment.center,
+                        alignment=ft.alignment.CENTER,
                         padding=ft.padding.symmetric(vertical=10)
                     ),
                     ft.Text("Thank you for choosing PharmaOps!", size=12, italic=True, color="outline"),
                     ft.Text("Please retain this receipt for your records.", size=10, color="outline"),
-                ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=2),
-                alignment=ft.alignment.center,
+                ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=2),
+                alignment=ft.alignment.CENTER,
                 padding=ft.padding.only(top=15)
             ),
             
@@ -198,14 +198,15 @@ def POSReceiptView(order_id: int):
                 ),
                 ft.Text("Digital POS Receipt", size=20, weight="bold", color="onSurface"),
                 ft.Container(width=40) # Spacer
-            ], alignment=ft.MainAxisAlignment.space_between, width=400),
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, width=400),
             ft.Container(height=20),
             receipt_card,
             ft.Container(height=20),
-        ], horizontal_alignment=ft.CrossAxisAlignment.center),
+        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
         expand=True,
-        alignment=ft.alignment.center,
+        alignment=ft.alignment.CENTER,
         bgcolor="surface", # subtle background
         padding=40
     )
+
 

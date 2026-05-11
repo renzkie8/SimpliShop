@@ -128,7 +128,7 @@ def BillingProfileView():
                     phone_field,
                     dob_field,
                     address_field,
-                ], spacing=15, scroll=ft.ScrollMode.auto, tight=True)
+                ], spacing=15, scroll=ft.ScrollMode.AUTO, tight=True)
             ),
             actions=[
                 ft.TextButton("Cancel", on_click=lambda e: e.page.close(edit_dialog)),
@@ -246,7 +246,7 @@ def BillingProfileView():
                     bgcolor="primaryContainer",
                     border_radius=50,
                     content=ft.Icon(ft.icons.RECEIPT_LONG, size=50, color="onPrimaryContainer"),
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                 ),
                 ft.Column([
                     txt_name_header,
@@ -335,5 +335,6 @@ def BillingProfileView():
             ),
             
         ], spacing=10),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

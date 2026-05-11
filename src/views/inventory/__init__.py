@@ -4,3 +4,4 @@ from .profile_view import InventoryProfileView
 
 __all__ = ['InventoryDashboard', 'ManageStock']
 
+

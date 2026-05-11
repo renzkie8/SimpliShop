@@ -167,9 +167,9 @@ def PaymentHistoryView():
                         ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No payment history found", size=18, color="outline"),
                         ft.Text("Try adjusting your filters", size=14, color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.center
+                    alignment=ft.alignment.CENTER
                 )
             )
         
@@ -202,5 +202,6 @@ def PaymentHistoryView():
             ], spacing=15),
             padding=20,
         ),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

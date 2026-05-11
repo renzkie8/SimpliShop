@@ -9,7 +9,7 @@ def ReportsView():
     """Reports interface with real database statistics."""
     
     # This column holds the generated report content with proper scrolling
-    report_output = ft.Column(spacing=10, scroll=ft.ScrollMode.auto)
+    report_output = ft.Column(spacing=10, scroll=ft.ScrollMode.AUTO)
     
     # Dropdown to choose report type
     report_type = ft.Dropdown(
@@ -49,15 +49,15 @@ def ReportsView():
         return ft.Container(
             content=ft.Column([
                 ft.Icon(icon, color=color, size=32),
-                ft.Text(str(value), size=22, weight="bold", color=color, text_align=ft.TextAlign.center),
+                ft.Text(str(value), size=22, weight="bold", color=color, text_align=ft.TextAlign.CENTER),
                 ft.Text(title, size=13, color="outline"),
-            ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=8),
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=8),
             padding=20,
             bgcolor="surface",
             border_radius=12,
             border=ft.border.all(1, "outlineVariant"),
             expand=True,
-            alignment=ft.alignment.center,
+            alignment=ft.alignment.CENTER,
         )
 
     # --- REPORT GENERATION FUNCTIONS ---
@@ -178,7 +178,7 @@ def ReportsView():
                             ft.Text("No inventory data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed medicines data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
-                        ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                         padding=50,
                     )
                 ]
@@ -313,7 +313,7 @@ def ReportsView():
                             ft.Text("No prescription data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed prescription data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
-                        ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                         padding=50,
                     )
                 ]
@@ -542,7 +542,7 @@ def ReportsView():
                             ft.Icon(ft.icons.CHECK_CIRCLE, color="primary", size=50),
                             ft.Text("All inventory levels are healthy!", 
                                    size=18, weight="bold", color="primary"),
-                        ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.center),
+                        ], spacing=10, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
                         padding=50,
                     )
                 )
@@ -580,7 +580,7 @@ def ReportsView():
                             ft.Text("Limited system data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed complete demo data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
-                        ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                         padding=50,
                     )
                 ]
@@ -684,7 +684,7 @@ def ReportsView():
                             ft.Text("No orders data available", size=18, weight="bold", color="tertiary"),
                             ft.Text("Run the database migration to seed orders data.", size=13, color="outline"),
                             ft.Text("Command: python src\\services\\db_migration.py", size=11, color="outline", italic=True),
-                        ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                         padding=50,
                     )
                 ]
@@ -799,7 +799,7 @@ def ReportsView():
                         content=ft.Column([
                             ft.Icon(ft.icons.ERROR, color="error", size=40),
                             ft.Text(f"Critical error: {str(ex)}", color="error", size=14),
-                        ], horizontal_alignment=ft.CrossAxisAlignment.center),
+                        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
                         padding=20,
                     )
                 ]
@@ -852,5 +852,6 @@ def ReportsView():
             border=ft.border.all(1, "outlineVariant"),
             expand=True,
         ),
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 

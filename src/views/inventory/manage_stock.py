@@ -90,7 +90,7 @@ def ManageStock():
                 ft.Container(cells[5], expand=3),   # Expiry
                 ft.Container(cells[6], expand=3),   # Supplier
                 ft.Container(cells[7], expand=2, alignment=ft.alignment.center_right), # Actions
-            ], alignment=ft.MainAxisAlignment.start, spacing=20)
+            ], alignment=ft.MainAxisAlignment.START, spacing=20)
         )
 
     # Modal Form Fields
@@ -129,10 +129,10 @@ def ManageStock():
             ft.Text("No medicines in inventory", size=20, weight="bold", color="outline"),
             ft.Container(height=10),
             ft.Text("To get started, click the 'Add Medicine' button above", 
-                   size=14, color="outline", text_align=ft.TextAlign.center),
-        ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=5),
+                   size=14, color="outline", text_align=ft.TextAlign.CENTER),
+        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=5),
         padding=80,
-        alignment=ft.alignment.center,
+        alignment=ft.alignment.CENTER,
         visible=False,
         expand=True,
     )
@@ -227,7 +227,7 @@ def ManageStock():
                             tooltip="Delete",
                             on_click=lambda e, mid=m['id']: prompt_delete(e, mid)
                         ),
-                    ], spacing=0, alignment=ft.MainAxisAlignment.end),
+                    ], spacing=0, alignment=ft.MainAxisAlignment.END),
                 ])
             )
 
@@ -282,7 +282,7 @@ def ManageStock():
     dialog = ft.AlertDialog(bgcolor="surface", content=ft.Container(width=500, content=ft.Column([
         name_input, ft.Container(height=5), category_input, ft.Container(height=5),
         ft.Row([price_input, stock_input], spacing=15), ft.Container(height=5), expiry_input,
-        ft.Container(height=5), supplier_input], tight=True, horizontal_alignment=ft.CrossAxisAlignment.stretch)),
+        ft.Container(height=5), supplier_input], tight=True, horizontal_alignment=ft.CrossAxisAlignment.STRETCH)),
         actions=[ft.TextButton("Cancel", on_click=lambda e: e.page.close(dialog)), ft.ElevatedButton("Save", bgcolor="primary", color="onPrimary", on_click=save_medicine)])
 
     del_dialog = ft.AlertDialog(bgcolor="surface", title=ft.Text("Confirm Delete"), content=ft.Text("Are you sure you want to delete this medicine?"),
@@ -295,7 +295,7 @@ def ManageStock():
         ft.Row([
             ft.Text("Stock Management", size=28, weight="bold"),
             ft.ElevatedButton("Add Medicine", icon=ft.icons.ADD, bgcolor="primary", color="onPrimary", on_click=open_add_dialog),
-        ], alignment=ft.MainAxisAlignment.space_between),
+        ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
         
         ft.Container(height=10),
         
@@ -321,5 +321,6 @@ def ManageStock():
             clip_behavior=ft.ClipBehavior.ANTI_ALIAS 
         ),
         
-    ], scroll=ft.ScrollMode.auto, expand=True, horizontal_alignment=ft.CrossAxisAlignment.stretch)
+    ], scroll=ft.ScrollMode.AUTO, expand=True, horizontal_alignment=ft.CrossAxisAlignment.STRETCH)
+
 

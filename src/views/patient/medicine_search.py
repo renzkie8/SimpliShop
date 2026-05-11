@@ -57,7 +57,7 @@ def MedicineSearch():
         width=24,
         height=24,
         border_radius=12,
-        alignment=ft.alignment.center,
+        alignment=ft.alignment.CENTER,
     )
     
     def get_cart_count():
@@ -255,7 +255,7 @@ def MedicineSearch():
                     bgcolor="surfaceVariant",
                     border_radius=8,
                     content=ft.Icon(ft.icons.MEDICATION, size=40, color="outline"),
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                 ),
                 # medicine info
                 ft.Column([
@@ -293,7 +293,7 @@ def MedicineSearch():
                     ),
                     # View Details Button REMOVED as requested
                 ], spacing=5),
-            ], alignment=ft.MainAxisAlignment.space_between, spacing=15),
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, spacing=15),
             padding=20,
             border=ft.border.all(1, "outlineVariant"),
             border_radius=10,
@@ -353,9 +353,9 @@ def MedicineSearch():
                         ft.Icon(ft.icons.SEARCH_OFF, size=80, color="outline"),
                         ft.Text("No medicines found", size=18, color="outline"),
                         ft.Text("Try a different search term or category", size=14, color="outline"),
-                    ], horizontal_alignment=ft.CrossAxisAlignment.center, spacing=10),
+                    ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
                     padding=50,
-                    alignment=ft.alignment.center,
+                    alignment=ft.alignment.CENTER,
                 )
             )
         
@@ -387,7 +387,7 @@ def MedicineSearch():
                 top=0,
             )
         ], width=70, height=48),
-    ], alignment=ft.MainAxisAlignment.space_between, vertical_alignment=ft.CrossAxisAlignment.start)
+    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, vertical_alignment=ft.CrossAxisAlignment.START)
     
     return ft.Column([
         header_row,
@@ -414,5 +414,6 @@ def MedicineSearch():
         
         # Results list
         results_container,
-    ], scroll=ft.ScrollMode.auto, spacing=0)
+    ], scroll=ft.ScrollMode.AUTO, spacing=0)
+
 
