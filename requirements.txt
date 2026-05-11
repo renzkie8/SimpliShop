@@ -1,4 +1,4 @@
-flet==0.28.2
+flet
 flet-fastapi
 uvicorn
 fastapi
