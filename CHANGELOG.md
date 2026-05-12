@@ -6,18 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2026-05-12] - Milestone: SimpliShop Migration & Azure Deployment
+## [2026-05-12] - Milestone: Azure SQL Integration & High Availability
 ### Added
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Migrated project from Pharmacy Management System to SimpliShop (Static Web App).
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Created Azure App Service `SimpliShop-System` on Python 3.11 runtime.
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Implemented FastAPI `app.py` to serve static HTML/CSS/JS content.
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Established GitHub Actions CI/CD pipeline for automated deployments (Optimization 1).
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Provisioned Azure SQL Database (Basic Tier) and Logical Server.
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Implemented backend API endpoints for User Registration and Authentication.
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Created the `Users` database schema for persistent cloud storage.
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Configured App Service "Scale Out" to 2 instances for High Availability (Optimization 2).
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Established professional repository structure (`/diagram`, `/deployment`, `/report`).
 
 ### Changed
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Renamed repository from `Pharmacy-Management-System` to `SimpliShop`.
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Updated Azure Federated Credentials to support renamed repository.
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Optimized App Service startup command for Uvicorn compatibility.
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Migrated project from Pharmacy Management System to SimpliShop (Static Web App).
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Created Azure App Service `SimpliShop-System` on Python 3.11 runtime.
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Implemented FastAPI `app.py` to serve static content and database APIs.
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Established GitHub Actions CI/CD pipeline (Optimization 1).
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Updated frontend JavaScript to utilize real-time Fetch API calls to Azure SQL.
 
 ### Fixed
+- [Carl Renz M. Colico & Francis Gabriel Nonato] - Resolved "Invalid object name 'Users'" error by implementing robust table initialization logic.
 - [Carl Renz M. Colico & Francis Gabriel Nonato] - Resolved "Internal Server Error" by adding explicit startup command in Azure Configuration.
-- [Carl Renz M. Colico & Francis Gabriel Nonato] - Fixed threading casing issues (`t.start()`) across all service modules.
