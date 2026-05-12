@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ Francis Gabriel Nonato] - Created the `Users` database schema for persistent cloud storage.
 - [Carl Renz M. Colico & Francis Gabriel Nonato] - Configured App Service "Scale Out" to 2 instances for High Availability (Optimization 2).
 - [ Francis Gabriel Nonato] - Established professional repository structure (`/diagram`, `/deployment`, `/report`).
+- [Carl Renz M. Colico] - Implemented Security Optimization 3: Migrated credentials to environment variables.
+- [ Francis Gabriel Nonato] - Implemented Optimization 4: Integrated Azure Blob Storage for static asset offloading.
+- [Carl Renz M. Colico] - Added `/health` monitoring endpoint for Azure App Service observability.
 
 ### Changed
 - [Carl Renz M. Colico ] - Migrated project from Pharmacy Management System to SimpliShop (Static Web App).

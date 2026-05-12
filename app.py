@@ -7,38 +7,61 @@ import os
 app = FastAPI()
 
 # --- AZURE SQL CONNECTION ---
-# Using the credentials you provided
-DB_SERVER = 'simpliadmin-renz-gab.database.windows.net'
-DB_NAME = 'SimpliShopDB'
-DB_USER = 'simpliadmin'
-DB_PASS = 'Simpli12345678'
-DB_DRIVER = '{ODBC Driver 18 for SQL Server}'
+# Best Practice: Use Environment Variables for security
+# In Azure Portal: Configuration -> Application Settings
+DB_SERVER = os.getenv('DB_SERVER', 'simpliadmin-renz-gab.database.windows.net')
+DB_NAME = os.getenv('DB_NAME', 'SimpliShopDB')
+DB_USER = os.getenv('DB_USER', 'simpliadmin')
+DB_PASS = os.getenv('DB_PASS', 'Simpli12345678') # Fallback for local testing (NOT recommended for production)
+DB_DRIVER = os.getenv('DB_DRIVER', '{ODBC Driver 18 for SQL Server}')
 
 connection_string = f"DRIVER={DB_DRIVER};SERVER={DB_SERVER};DATABASE={DB_NAME};UID={DB_USER};PWD={DB_PASS};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 
 def get_db_conn():
-    return pyodbc.connect(connection_string)
+    try:
+        return pyodbc.connect(connection_string)
+    except Exception as e:
+        print(f"Connection Error: {e}")
+        return None
 
-# Create table if not exists
-try:
-    conn = get_db_conn()
-    cursor = conn.cursor()
-    cursor.execute("""
-        IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Users')
-        BEGIN
-            CREATE TABLE Users (
-                id INT IDENTITY(1,1) PRIMARY KEY,
-                name NVARCHAR(100),
-                email NVARCHAR(100) UNIQUE,
-                password NVARCHAR(100)
-            )
-        END
-    """)
-    conn.commit()
-    conn.close()
-    print("Database connection successful and table verified!")
-except Exception as e:
-    print(f"Database Error: {e}")
+# --- HEALTH CHECK ENDPOINT ---
+# Optimization: Allows Azure to monitor app health
+@app.get("/health")
+async def health_check():
+    try:
+        conn = get_db_conn()
+        if conn:
+            conn.close()
+            return {"status": "healthy", "database": "connected"}
+        return {"status": "degraded", "database": "disconnected"}
+    except Exception as e:
+        return {"status": "unhealthy", "error": str(e)}
+
+# Create table if not exists (Startup Initialization)
+@app.on_event("startup")
+async def startup_event():
+    try:
+        conn = get_db_conn()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Users')
+                BEGIN
+                    CREATE TABLE Users (
+                        id INT IDENTITY(1,1) PRIMARY KEY,
+                        name NVARCHAR(100),
+                        email NVARCHAR(100) UNIQUE,
+                        password NVARCHAR(100)
+                    )
+                END
+            """)
+            conn.commit()
+            conn.close()
+            print("Database connection successful and table verified!")
+        else:
+            print("Database connection failed during startup.")
+    except Exception as e:
+        print(f"Database Startup Error: {e}")
 
 # --- DATA MODELS ---
 class UserSignup(BaseModel):

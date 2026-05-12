@@ -1,33 +1,32 @@
-HOW TO RUN SIMPLISHOP
+HOW TO ACCESS SIMPLISHOP (CLOUD DEPLOYMENT)
 
 Project Introduction:
-SimpliShop is a clean and organized e-commerce website designed for our final UX-UI project. It uses HTML for the structure, CSS for the design, and JavaScript for the interactive features like the shopping cart and product filters.
+SimpliShop is a professional, cloud-native e-commerce platform developed for our final project. It has been fully migrated from a local environment to a robust Microsoft Azure architecture, utilizing FastAPI for the backend and a real Azure SQL Database for persistent user authentication.
 
-System Requirements:
-1. A modern web browser like Google Chrome, Microsoft Edge, or Mozilla Firefox.
-2. A computer with any operating system (Windows, macOS, or Linux).
+Live Website URL:
+https://simplishop-system-e5gedhdsbacjbmcn.southeastasia-01.azurewebsites.net
 
-Steps to Run the Project:
-1. Prepare the files:
-Make sure all the project files are saved in one folder. If you received this as a compressed zip file, right click the folder and select Extract All to a location on your computer.
-2. Verify the folder structure:
-Open your project folder and ensure you see the following items:
+How to Access:
+1. Ensure you have a stable internet connection.
+2. Open any modern web browser (Chrome, Edge, or Firefox).
+3. Copy and paste the URL above into your browser address bar.
 
-- All the HTML files like index.html, cart.html, and signin.html.
-- The folder named "css" which contains styles.css and pages.css.
-- The folder named "js" which contains script.js.
+Core Cloud Features:
+- User Authentication (Azure SQL): Unlike local prototypes, SimpliShop now uses a real Azure SQL Database. You can "Create an Account" on the Sign-Up page, and your data will be securely stored in the cloud.
+- High Availability: The platform is scaled to multiple instances on Azure, ensuring that the website remains fast and accessible at all times.
+- CI/CD Integration: Any updates to the system are automatically deployed via GitHub Actions, following professional DevOps practices.
 
-1. Launch the website:
-Locate the file named index.html. Right click it and choose Open with, then select your preferred web browser. This will open the homepage of SimpliShop.
+Key Functional Workflows:
+- Real Sign-Up/Login: Test the system by creating a new account. Your credentials will be verified against our live SQL Server.
+- Dynamic Search: Use the search bar to find products (headphones, smartphones, etc.) with real-time suggestions.
+- Product Comparison: Select multiple products to see a side-by-side comparison in a modal window.
+- Full Checkout Flow: Add items to your cart and follow the professional checkout process from shipping to payment confirmation.
 
-How to use the core features:
-- Signing In: Click the account icon or the sign in link. Enter a sample email and password. Our code uses session storage to remember you and display your name on the header.
-- Searching for Products: Click the search bar and type words like "phone" or "headphones." You will see the dark blur effect and a list of suggestions. Press enter to see the results.
-- Filtering and Comparing: On the search results pages, you can click the checkboxes on the left to filter by brand or price. You can also check the Compare boxes on multiple products to see them side by side in a pop up window.
-- Using the Cart: Click Add to Cart on any item. You will see a red badge update on the cart icon. Click the cart icon to change quantities or remove items.
-- Checkout: From the cart page, click Proceed to Checkout. Follow the steps through the shipping and payment pages until you reach the final confirmation.
+Cloud Architecture & Technology:
+- Cloud Provider: Microsoft Azure
+- Compute: Azure App Service (Python 3.11 / FastAPI)
+- Database: Azure SQL Database (Basic Tier)
+- Optimization: GitHub Actions CI/CD Pipeline
+- Optimization: Scale-Out (High Availability)
 
-Troubleshooting:
-- If the icons or images do not appear, make sure the "css" and "js" folders are in the same location as the HTML files.
-- Make sure JavaScript is enabled in your browser settings so that the pop up windows and buttons work correctly.
-- Do not use Incognito or Private mode if you want the website to remember your login and cart items.
+Developed by: Carl Renz M. Colico & Francis Gabriel Nonato
