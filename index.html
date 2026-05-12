@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SimpliShop - Shop smarter</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Simpli<span class="logo-shop">Shop</span></a>
+      <button class="location-pin" aria-label="Location">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </button>
+      <div class="search-bar">
+        <input type="text" placeholder="Search SimpliShop" autocomplete="off" aria-label="Search">
+        <button aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+      <div class="header-right">
+        <div class="header-greeting">Hello, <a href="signin.html">sign in</a></div>
+        <a href="signin.html" class="icon-btn account-link" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-carousel" data-carousel data-autoplay="5000">
+    <div class="carousel-track">
+
+      <div class="carousel-slide slide-welcome">
+        <div class="carousel-inner">
+          <div class="carousel-text">
+            <h1>Welcome to Simpli<span>Shop</span></h1>
+            <p>Shop smarter with a clean, organized experience designed to help you find exactly what you need.</p>
+            <div class="carousel-actions">
+              <a href="search-headphones.html" class="btn btn-primary">
+                Start Shopping
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"/></svg>
+              </a>
+              <a href="#categories" class="btn btn-outline">Browse Categories</a>
+            </div>
+          </div>
+          <div class="carousel-image">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=900&h=400&fit=crop" alt="" onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide slide-shipping">
+        <div class="carousel-inner">
+          <div class="carousel-text">
+            <span class="carousel-eyebrow">Limited Time</span>
+            <h1>Check out your new <span>Free Shipping</span> Zone</h1>
+            <p>Free delivery on thousands of items across electronics, fashion, home, and more. No minimum order.</p>
+            <div class="carousel-actions">
+              <a href="search-headphones.html" class="btn btn-primary">
+                Shop Free Shipping
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-image">
+            <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=900&h=400&fit=crop" alt="" onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide slide-tech">
+        <div class="carousel-inner">
+          <div class="carousel-text">
+            <span class="carousel-eyebrow">Trending Now</span>
+            <h1>Latest <span>Tech Gadgets</span> at the best prices</h1>
+            <p>Smartphones, laptops, headphones, and more — handpicked deals updated every day.</p>
+            <div class="carousel-actions">
+              <a href="search-smartphones.html" class="btn btn-primary">
+                Browse Smartphones
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"/></svg>
+              </a>
+              <a href="search-headphones.html" class="btn btn-outline">Headphones</a>
+            </div>
+          </div>
+          <div class="carousel-image">
+            <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=900&h=400&fit=crop" alt="" onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide slide-fashion">
+        <div class="carousel-inner">
+          <div class="carousel-text">
+            <span class="carousel-eyebrow">New Arrivals</span>
+            <h1>Refresh your <span>style</span> this season</h1>
+            <p>Discover the latest fashion drops with up to 40% off across hundreds of brands.</p>
+            <div class="carousel-actions">
+              <a href="search-clothes.html" class="btn btn-primary">
+                Shop Fashion
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-image">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&h=400&fit=crop" alt="" onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-arrow carousel-prev" aria-label="Previous slide">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="carousel-arrow carousel-next" aria-label="Next slide">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <div class="carousel-dots">
+      <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+      <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <div class="container">
+    <section class="section" id="categories">
+      <h2>Shop by Category</h2>
+      <div class="categories">
+        <a href="search-headphones.html" class="category-item">
+          <div class="category-icon electronics"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <span>Electronics</span>
+        </a>
+        <a href="search-headphones.html" class="category-item">
+          <div class="category-icon computers"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <span>Computers</span>
+        </a>
+        <a href="search-smartphones.html" class="category-item">
+          <div class="category-icon cameras"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div>
+          <span>Smartphones</span>
+        </a>
+        <a href="search-headphones.html" class="category-item">
+          <div class="category-icon wearables"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="7"/><polyline points="12 9 12 12 13.5 13.5"/><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"/></svg></div>
+          <span>Wearables</span>
+        </a>
+        <a href="search-headphones.html" class="category-item">
+          <div class="category-icon audio"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
+          <span>Audio</span>
+        </a>
+        <a href="search-clothes.html" class="category-item">
+          <div class="category-icon fashion"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg></div>
+          <span>Fashion</span>
+        </a>
+        <a href="search-headphones.html" class="category-item">
+          <div class="category-icon home"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <span>Home & Kitchen</span>
+        </a>
+        <a href="search-headphones.html" class="category-item">
+          <div class="category-icon books"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <span>Books</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Top Picks for You</h2>
+          <div class="subtitle">Handpicked products based on quality and ratings</div>
+        </div>
+        <a href="search-headphones.html" class="view-all">View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-product-id="p-laptop">
+          
+          <span class="discount-badge">-18%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop" alt="Dell XPS 15 Laptop - 15.6" FHD Display, Intel i7, 16GB RAM" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Dell XPS 15 Laptop - 15.6" FHD Display, Intel i7, 16GB RAM</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.7</span>
+            <span class="review-count">(3,456)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱56,964</span><span class="price-strike">₱69,623</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-laptop" data-title="Dell XPS 15 Laptop - 15.6" FHD Display, Intel i7, 16GB RAM" data-price="56964" data-price-strike="69623" data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-galaxy">
+          
+          <span class="discount-badge">-12%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop" alt="Samsung Galaxy S24 Ultra - 256GB, 5G Smartphone" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Samsung Galaxy S24 Ultra - 256GB, 5G Smartphone</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.6</span>
+            <span class="review-count">(8,923)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱47,470</span><span class="price-strike">₱53,799</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-galaxy" data-title="Samsung Galaxy S24 Ultra - 256GB, 5G Smartphone" data-price="47470" data-price-strike="53799" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-camera">
+          
+          <span class="discount-badge">-14%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=400&fit=crop" alt="Canon EOS R6 Mirrorless Camera with 24-105mm Lens" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Canon EOS R6 Mirrorless Camera with 24-105mm Lens</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.8</span>
+            <span class="review-count">(2,134)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱120,258</span><span class="price-strike">₱139,247</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-camera" data-title="Canon EOS R6 Mirrorless Camera with 24-105mm Lens" data-price="120258" data-price-strike="139247" data-image="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card with-yellow" data-product-id="p-watch">
+          
+          <span class="discount-badge">-7%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&h=400&fit=crop" alt="Apple Watch Series 9 GPS - 45mm Midnight Aluminum" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Apple Watch Series 9 GPS - 45mm Midnight Aluminum</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.7</span>
+            <span class="review-count">(12,456)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱27,153</span><span class="price-strike">₱29,052</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-watch" data-title="Apple Watch Series 9 GPS - 45mm Midnight Aluminum" data-price="27153" data-price-strike="29052" data-image="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-ipad">
+          
+          <span class="discount-badge">-12%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop" alt="iPad Pro 12.9" M2 Chip, 128GB WiFi - Space Gray" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">iPad Pro 12.9" M2 Chip, 128GB WiFi - Space Gray</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.9</span>
+            <span class="review-count">(5,678)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱69,560</span><span class="price-strike">₱79,054</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-ipad" data-title="iPad Pro 12.9" M2 Chip, 128GB WiFi - Space Gray" data-price="69560" data-price-strike="79054" data-image="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-bg-white">
+        <div class="section-header">
+          <div>
+            <h2>Budget-Friendly Items</h2>
+            <div class="subtitle">Great products at affordable prices</div>
+          </div>
+          <a href="search-headphones.html" class="view-all">View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"/></svg></a>
+        </div>
+        <div class="product-grid">
+          <div class="product-card" data-product-id="p-earbuds">
+          
+          <span class="discount-badge">-33%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=400&h=400&fit=crop" alt="SimpliShop True Wireless Earbuds with Charging Case" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">SimpliShop True Wireless Earbuds with Charging Case</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.2</span>
+            <span class="review-count">(15,234)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱632</span><span class="price-strike">₱948</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-earbuds" data-title="SimpliShop True Wireless Earbuds with Charging Case" data-price="632" data-price-strike="948" data-image="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-backpack">
+          
+          <span class="discount-badge">-35%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop" alt="Urban Backpack - 30L Water Resistant Laptop Bag" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Urban Backpack - 30L Water Resistant Laptop Bag</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.4</span>
+            <span class="review-count">(9,876)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱822</span><span class="price-strike">₱1,265</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-backpack" data-title="Urban Backpack - 30L Water Resistant Laptop Bag" data-price="822" data-price-strike="1265" data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-press">
+          
+          <span class="discount-badge">-33%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop" alt="French Press Coffee Maker - 1L Borosilicate Glass" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">French Press Coffee Maker - 1L Borosilicate Glass</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.3</span>
+            <span class="review-count">(6,543)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱505</span><span class="price-strike">₱758</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-press" data-title="French Press Coffee Maker - 1L Borosilicate Glass" data-price="505" data-price-strike="758" data-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-lamp">
+          
+          <span class="discount-badge">-40%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=400&h=400&fit=crop" alt="LED Desk Lamp with USB Charging Port - Adjustable" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">LED Desk Lamp with USB Charging Port - Adjustable</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.5</span>
+            <span class="review-count">(4,321)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱948</span><span class="price-strike">₱1,581</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-lamp" data-title="LED Desk Lamp with USB Charging Port - Adjustable" data-price="948" data-price-strike="1581" data-image="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-yoga">
+          
+          <span class="discount-badge">-31%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=400&fit=crop" alt="Premium Yoga Mat - Non-Slip, Extra Thick 6mm" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Premium Yoga Mat - Non-Slip, Extra Thick 6mm</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.6</span>
+            <span class="review-count">(7,890)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱569</span><span class="price-strike">₱822</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-yoga" data-title="Premium Yoga Mat - Non-Slip, Extra Thick 6mm" data-price="569" data-price-strike="822" data-image="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Recommended for You</h2>
+          <div class="subtitle">Personalized picks based on your interests</div>
+        </div>
+        <a href="search-headphones.html" class="view-all">View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-product-id="p-shoes">
+          <div class="sponsored-label">Sponsored</div>
+          <span class="discount-badge">-18%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop" alt="Nike Air Zoom Pegasus Running Shoes - Breathable Mesh" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Nike Air Zoom Pegasus Running Shoes - Breathable Mesh</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.7</span>
+            <span class="review-count">(11,234)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱5,693</span><span class="price-strike">₱6,959</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-shoes" data-title="Nike Air Zoom Pegasus Running Shoes - Breathable Mesh" data-price="5693" data-price-strike="6959" data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-book">
+          
+          <span class="discount-badge">-30%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop" alt="The Psychology of Money - Paperback Bestseller" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">The Psychology of Money - Paperback Bestseller</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.8</span>
+            <span class="review-count">(23,456)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱220</span><span class="price-strike">₱315</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-book" data-title="The Psychology of Money - Paperback Bestseller" data-price="220" data-price-strike="315" data-image="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-sony">
+          <div class="sponsored-label">Sponsored</div>
+          <span class="discount-badge">-14%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=400&fit=crop" alt="Sony WH-1000XM5 Noise Cancelling Headphones - Black" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Sony WH-1000XM5 Noise Cancelling Headphones - Black</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.6</span>
+            <span class="review-count">(9,876)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱18,982</span><span class="price-strike">₱22,146</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-sony" data-title="Sony WH-1000XM5 Noise Cancelling Headphones - Black" data-price="18982" data-price-strike="22146" data-image="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card with-yellow" data-product-id="p-fitbit">
+          
+          <span class="discount-badge">-17%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop" alt="Fitbit Charge 6 Fitness Tracker - Heart Rate Monitor" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Fitbit Charge 6 Fitness Tracker - Heart Rate Monitor</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.4</span>
+            <span class="review-count">(8,543)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱9,493</span><span class="price-strike">₱11,392</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-fitbit" data-title="Fitbit Charge 6 Fitness Tracker - Heart Rate Monitor" data-price="9493" data-price-strike="11392" data-image="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div><div class="product-card" data-product-id="p-coffee">
+          
+          <span class="discount-badge">-19%</span>
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&h=400&fit=crop" alt="Nespresso Coffee Machine - Automatic Espresso Maker" onerror="this.parentElement.classList.add('img-fallback');this.remove();"></div>
+          <div class="product-title">Nespresso Coffee Machine - Automatic Espresso Maker</div>
+          <div class="product-rating">
+            <span class="stars">★★★★<span style="color:#ddd">★</span></span>
+            <span class="rating-text">4.7</span>
+            <span class="review-count">(8,765)</span>
+          </div>
+          <div class="product-price-row">
+            <span class="price">₱8,227</span><span class="price-strike">₱10,126</span>
+          </div>
+          <div class="free-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            FREE delivery
+          </div>
+          <button class="btn btn-primary btn-sm btn-block" style="margin-top:10px;" data-add-to-cart 
+            data-id="p-coffee" data-title="Nespresso Coffee Machine - Automatic Espresso Maker" data-price="8227" data-price-strike="10126" data-image="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&h=400&fit=crop">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-info">
+      Showing personalized results · <a href="search-headphones.html">See all products</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <a href="#">About SimpliShop</a>
+        <a href="#">Careers</a>
+        <a href="#">Press Releases</a>
+        <a href="#">SimpliShop Tech</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect with Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <a href="#">Sell on SimpliShop</a>
+        <a href="#">Become an Affiliate</a>
+        <a href="#">Advertise Your Products</a>
+        <a href="#">SimpliPay</a>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <a href="#">Your Account</a>
+        <a href="#">Returns Centre</a>
+        <a href="#">100% Purchase Protection</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">Simpli<span>Shop</span></div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.408.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.592 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+      <div class="footer-links-bottom">
+        <a href="#">Conditions of Use</a> ·
+        <a href="#">Privacy Notice</a> ·
+        <a href="#">Interest-Based Ads</a>
+      </div>
+      <div class="footer-copyright">© 1996-2026, SimpliShop.com, Inc.</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

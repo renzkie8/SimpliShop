@@ -1,0 +1,33 @@
+HOW TO RUN SIMPLISHOP
+
+Project Introduction:
+SimpliShop is a clean and organized e-commerce website designed for our final UX-UI project. It uses HTML for the structure, CSS for the design, and JavaScript for the interactive features like the shopping cart and product filters.
+
+System Requirements:
+1. A modern web browser like Google Chrome, Microsoft Edge, or Mozilla Firefox.
+2. A computer with any operating system (Windows, macOS, or Linux).
+
+Steps to Run the Project:
+1. Prepare the files:
+Make sure all the project files are saved in one folder. If you received this as a compressed zip file, right click the folder and select Extract All to a location on your computer.
+2. Verify the folder structure:
+Open your project folder and ensure you see the following items:
+
+- All the HTML files like index.html, cart.html, and signin.html.
+- The folder named "css" which contains styles.css and pages.css.
+- The folder named "js" which contains script.js.
+
+1. Launch the website:
+Locate the file named index.html. Right click it and choose Open with, then select your preferred web browser. This will open the homepage of SimpliShop.
+
+How to use the core features:
+- Signing In: Click the account icon or the sign in link. Enter a sample email and password. Our code uses session storage to remember you and display your name on the header.
+- Searching for Products: Click the search bar and type words like "phone" or "headphones." You will see the dark blur effect and a list of suggestions. Press enter to see the results.
+- Filtering and Comparing: On the search results pages, you can click the checkboxes on the left to filter by brand or price. You can also check the Compare boxes on multiple products to see them side by side in a pop up window.
+- Using the Cart: Click Add to Cart on any item. You will see a red badge update on the cart icon. Click the cart icon to change quantities or remove items.
+- Checkout: From the cart page, click Proceed to Checkout. Follow the steps through the shipping and payment pages until you reach the final confirmation.
+
+Troubleshooting:
+- If the icons or images do not appear, make sure the "css" and "js" folders are in the same location as the HTML files.
+- Make sure JavaScript is enabled in your browser settings so that the pop up windows and buttons work correctly.
+- Do not use Incognito or Private mode if you want the website to remember your login and cart items.

@@ -1,12 +1,8 @@
-import sys
-import os
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
-# Add the 'src' directory to the Python path so imports work correctly
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
+app = FastAPI()
 
-import flet.fastapi as flet_fastapi
-
-from main import main
-
-# This 'app' object is what Azure App Service (Uvicorn/Gunicorn) will look for.
-app = flet_fastapi.app(main)
+# This single line tells Azure to serve all your HTML, CSS, and JS files
+# It will automatically find 'index.html' and make it your homepage!
+app.mount("/", StaticFiles(directory=".", html=True), name="static")
