@@ -28,4 +28,11 @@ To further reduce costs for the SimpliShop platform, we could implement the foll
 ---
 
 > [!IMPORTANT]
-> **To-Do**: Attach the screenshot of your Azure Pricing Calculator here.
+> **Azure Pricing Calculator Estimates**:
+> ![Total Monthly Estimate](../screenshot%20of%20deliverables/screenshots/Deliverable%203%20SS/Total_Cost.png)
+>
+> **App Service Pricing Details**:
+> ![App Service Cost](../screenshot%20of%20deliverables/screenshots/Deliverable%203%20SS/App_Service_Cost.png)
+>
+> **Azure SQL Pricing Details**:
+> ![Azure SQL Cost](../screenshot%20of%20deliverables/screenshots/Deliverable%203%20SS/Azure-SQLDB_Cost.png)
