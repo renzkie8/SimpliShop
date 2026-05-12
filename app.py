@@ -57,6 +57,21 @@ async def signup(user: UserSignup):
     try:
         conn = get_db_conn()
         cursor = conn.cursor()
+        
+        # Aggressive table creation - just in case it didn't run at startup
+        cursor.execute("""
+            IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Users')
+            BEGIN
+                CREATE TABLE Users (
+                    id INT IDENTITY(1,1) PRIMARY KEY,
+                    name NVARCHAR(100),
+                    email NVARCHAR(100) UNIQUE,
+                    password NVARCHAR(100)
+                )
+            END
+        """)
+        conn.commit()
+
         cursor.execute("INSERT INTO Users (name, email, password) VALUES (?, ?, ?)", 
                        (user.name, user.email, user.password))
         conn.commit()
@@ -65,6 +80,7 @@ async def signup(user: UserSignup):
     except pyodbc.IntegrityError:
         raise HTTPException(status_code=400, detail="Email already exists")
     except Exception as e:
+        # If it's a "Table already exists" or similar, we can ignore, but here we catch real errors
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/login")
