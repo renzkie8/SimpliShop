@@ -777,18 +777,33 @@ function setupPaymentOptions() {
 function setupAuthForms() {
   const signin = document.getElementById('signinForm');
   if (signin) {
-    signin.addEventListener('submit', (e) => {
+    signin.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = signin.querySelector('#email').value.trim();
       const pw = signin.querySelector('#password').value;
       if (!email || !pw) return;
-      Auth.setUser({ email: email, name: email.split('@')[0] });
-      window.location.href = 'index.html';
+
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, password: pw })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          Auth.setUser({ email: email, name: data.name });
+          window.location.href = 'index.html';
+        } else {
+          alert(data.detail || 'Invalid login');
+        }
+      } catch (err) {
+        alert('Database connection failed. Please try again.');
+      }
     });
   }
   const signup = document.getElementById('signupForm');
   if (signup) {
-    signup.addEventListener('submit', (e) => {
+    signup.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = signup.querySelector('#name').value.trim();
       const email = signup.querySelector('#email').value.trim();
@@ -798,9 +813,24 @@ function setupAuthForms() {
         alert('Passwords do not match!');
         return;
       }
-      if (!name || !email || !pw) return;
-      Auth.setUser({ name: name, email: email });
-      window.location.href = 'index.html';
+
+      try {
+        const res = await fetch('/api/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, email: email, password: pw })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          Auth.setUser({ email: email, name: name });
+          alert('Account created successfully!');
+          window.location.href = 'index.html';
+        } else {
+          alert(data.detail || 'Signup failed');
+        }
+      } catch (err) {
+        alert('Database connection failed. Please try again.');
+      }
     });
   }
 
