@@ -21,6 +21,13 @@ This is the final checklist for our **Cloud Computing (CSEC 3)** project. Let's 
 - [ ] **Update README**: Put the final YouTube/Video link in the `README.md`.
 - [ ] **Final Link Check**: Test the live link one last time: [https://simplishop-system-e5gedhdsbacjbmcn.southeastasia-01.azurewebsites.net](https://simplishop-system-e5gedhdsbacjbmcn.southeastasia-01.azurewebsites.net)
 
+## 📂 5. Repository Structure (Section 5 Requirement)
+- [ ] **Create Folders**: Ensure we have the following folder names exactly:
+    - `/diagram/` (Move architecture diagram here)
+    - `/deployment/` (Move deployment docs and screenshots here)
+    - `/report/` (Move cost estimate report here)
+- [ ] **Clean Up Root**: Only `README.md`, `CHANGELOG.md`, `app.py`, and your main HTML files should be in the root. Move everything else into the folders above.
+
 ---
 **Team**: Carl Renz M. Colico & Francis Gabriel Nonato
-**Status**: 90% Complete! 🚀
+**Status**: 95% Complete! 🚀
