@@ -1,0 +1,42 @@
+# Available files
+
+- `.env.example`
+- `.github/workflows/main_simplishop-system.yml`
+- `.gitignore`
+- `CHANGELOG.md`
+- `DATA.md`
+- `README.md`
+- `VALIDATION.md`
+- `app.py`
+- `cart.html`
+- `checkout-confirm.html`
+- `checkout-payment.html`
+- `checkout-shipping.html`
+- `css/pages.css`
+- `css/styles.css`
+- `deployment/ORIGINAL_README.md`
+- `deployment/README.md`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/Activity-Log_DB_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/Activity-Log_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/AppServicePlan_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/AzureSQLDB_Overview_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/CICD_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/DB-StorageAcc_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/KeyVault_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/Managed-Identity_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/NSG_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/Networking_SQL-Server_SimpliShop.png`
+- `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/Overview_SimpliShop.png`
+- `deployment/screenshots/Deliverable 3 - Cost Estimate Report/App_Service_Cost.png`
+- `deployment/screenshots/Deliverable 3 - Cost Estimate Report/Azure-SQLDB_Cost.png`
+- `deployment/screenshots/Deliverable 3 - Cost Estimate Report/Total_Cost.png`
+- `diagram/architecture.png`
+- `index.html`
+- `js/script.js`
+- `report/cost-estimate.md`
+- `requirements.txt`
+- `search-clothes.html`
+- `search-headphones.html`
+- `search-smartphones.html`
+- `signin.html`
+- `signup.html`

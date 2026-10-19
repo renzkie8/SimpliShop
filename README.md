@@ -1,3 +1,43 @@
+# SimpliShop
+
+Cloud-computing e-commerce project with FastAPI, Azure App Service and Azure SQL.
+
+**Portfolio:** [Carl Renz Colico](https://github.com/renzkie8) · **Year:** Year 3
+
+## Methodology
+
+Serve the e-commerce frontend with FastAPI and use Azure-hosted infrastructure and environment-based database configuration.
+
+## Results and limitations
+
+The local archive matches the existing GitHub repository after line-ending normalization. Existing source and deployment documentation are retained. Live cloud availability was not re-tested.
+
+This upload documents the supplied submission. Experiments, model training, graphical interfaces and external services were not fully rerun during portfolio preparation. See VALIDATION.md for checks actually performed.
+
+## Getting started
+
+From this folder run `python -m http.server 8000`, then open http://localhost:8000/index.html. External CDN resources require an internet connection.
+
+## Contents
+
+See [FILES.md](FILES.md) for the file inventory and [DATA.md](DATA.md) for inputs and exclusions. Original documentation, when supplied, follows below. Nonidentical drafts remain identifiable by their original names or a `variant` suffix.
+
+## Provenance and credits
+
+Original comments, team names and reference credits are retained. This repository represents coursework in Carl Renz Colico’s learning portfolio; collaborative or starter code is not claimed as solely individual work.
+
+Source submissions: `SimpliShop-main.zip`
+
+No new blanket license is applied to third-party assets, datasets, course templates or collaborative work. Existing notices remain applicable.
+
+## Topics
+
+python, fastapi, azure, cloud-computing, e-commerce, group-project
+
+---
+
+## Original project documentation
+
 # SimpliShop - Cloud E-Commerce Deployment
 
 **Course**: CSEC 3 – Cloud Computing  
@@ -82,3 +122,4 @@ SimpliShop is a professional, cloud-native e-commerce platform developed for our
 | **App Service Cost Estimate**<br>![App Service Cost](deployment/screenshots/Deliverable%203%20-%20Cost%20Estimate%20Report/App_Service_Cost.png) | The calculated monthly estimated cost for running our App Service compute instances using the Azure Pricing Calculator. |
 | **Azure SQL Database Cost Estimate**<br>![Azure SQL Database Cost](deployment/screenshots/Deliverable%203%20-%20Cost%20Estimate%20Report/Azure-SQLDB_Cost.png) | Projected monthly costs for our Basic/Serverless SQL Database tier to ensure an optimized budget. |
 | **Total Architecture Cost**<br>![Total Architecture Cost](deployment/screenshots/Deliverable%203%20-%20Cost%20Estimate%20Report/Total_Cost.png) | The comprehensive overall monthly budget estimate for the entire SimpliShop Azure deployment. |
+
