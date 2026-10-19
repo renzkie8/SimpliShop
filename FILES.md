@@ -14,7 +14,6 @@
 - `checkout-shipping.html`
 - `css/pages.css`
 - `css/styles.css`
-- `deployment/ORIGINAL_README.md`
 - `deployment/README.md`
 - `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/Activity-Log_DB_SimpliShop.png`
 - `deployment/screenshots/Deliverable 2 - Deployment Documentation - Method B (GUI)/Activity-Log_SimpliShop.png`
