@@ -2,7 +2,7 @@
 
 Cloud-computing e-commerce project with FastAPI, Azure App Service and Azure SQL.
 
-**Portfolio:** [Carl Renz Colico](https://github.com/renzkie8) · **Year:** Year 3
+**Portfolio:** [Carl Renz Colico](https://github.com/renzkie8) · **Year / Section:** Year 3 — BSCS 3-A
 
 ## Methodology
 
@@ -123,3 +123,7 @@ SimpliShop is a professional, cloud-native e-commerce platform developed for our
 | **Azure SQL Database Cost Estimate**<br>![Azure SQL Database Cost](deployment/screenshots/Deliverable%203%20-%20Cost%20Estimate%20Report/Azure-SQLDB_Cost.png) | Projected monthly costs for our Basic/Serverless SQL Database tier to ensure an optimized budget. |
 | **Total Architecture Cost**<br>![Total Architecture Cost](deployment/screenshots/Deliverable%203%20-%20Cost%20Estimate%20Report/Total_Cost.png) | The comprehensive overall monthly budget estimate for the entire SimpliShop Azure deployment. |
 
+
+## Application preservation
+
+Application source and dependency files match the pre-portfolio GitHub version. The introductory CCCS exercise retains a personal-ID placeholder; application logic is unchanged by that privacy substitution. Portfolio documentation, topics and ignore rules are separate additions.
